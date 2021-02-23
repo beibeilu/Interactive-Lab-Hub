@@ -70,20 +70,29 @@ The interactive device can be anything *except* a computer, a tablet computer or
 **Describe your setting, players, activity and goals here.**
 
 Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
+
+> In a daily life setting, I use the phone to mimic wearable devices which indicate everybody's energy level with the color of light. When the person's energy level is low, the device turns red. As they gain energy from various activities, the energy level turns green. The goal for this interactive device is to explicitly show the energy level of people, to make awareness of mental and physical wellbeing. Moreover, since people can see the status of other people, the device encourages interpersonal interaction. When two persons hug each other, both of their energy level goes up. 
+
+
 **Include a picture of your storyboard here**
+
+![Part 1 - Storyboard](storyboard-p1.png)
 
 Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
 **Summarize feedback you got here.**
 
+> Overall people like this idea. One potential issue with this setup is that whether there is a privacy setting for this device. For example, to show the status only to people who are close to the user and hide the status in other cases. 
 
 ## Part B. Act out the Interaction
 
 Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
 
 **Are there things that seemed better on paper than acted out?**
+> It is requiring for the actor to perform the scene. The actor need to compensate for the subtle effect of the changing of the light color to tell the story. 
 
 **Are there new ideas that occur to you or your collaborators that come up from the acting?**
 
+> We added additional scene that could potentially drain energy to show the meaning of the light. By showing that the energy level is dropping when doing exercise and studying, we can then show ways to gain energy. 
 
 ## Part C. Prototype the device
 
@@ -97,10 +106,16 @@ If you run into technical issues with this tool, you can also use a light switch
 
 **Give us feedback on Tinkerbelle.**
 
+> I hope there is a setting to adjust frequency and order of a series of color. One problem I encounter with the webpage is missing the option to always keep the screen lit. 
+
 ## Part D. Wizard the device
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
 **Include your first attempts at recording the set-up video here.**
+
+> [Link to Video (with Cat)](https://youtu.be/oIA3smkt1t4)
+
+> [Link to Video (with Cat and Human)](https://youtu.be/HkR5LZ_xxiA)
 
 Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
 
@@ -114,15 +129,24 @@ Think about the setting of the device: is the environment a place where the devi
 
 **Include sketches of what your device might look like here.**
 
+![Part 1 - Device](device.png)
+
 **What concerns or opportunitities are influencing the way you've designed the device to look?**
+> The form of the device is an issue. It does not really make much sense to hang a phone on someone's chest. The phone is rather uncomfortable to wear. 
+
+> It would be preferable is the device is floating around the person, like a carton lightbulb pop on top of someone's head. With this approach, even though not practical, is preferable for video shooting. It is much easier to capture the change of light when the device is facing the camera. If the device is not limited to a phone, then I could use more flexible material or create a jewelry-like wearable device. 
 
 
 ## Part F. Record
 
 **Take a video of your prototyped interaction.**
 
+> [Link to Video](https://youtu.be/swzV6BQQBoY)
+
 **Please indicate anyone you collaborated with on this Lab.**
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+
+> I asked my roommates (Miao, Richard and Michael) to act in my video! The main source of inspiration for the visible "status bar" is Sims: the progress bar hovering above the avatar's head. 
 
 # Staging Interaction, Part 2 
 
@@ -135,6 +159,8 @@ You will be assigned three partners from another group. Go to their github pages
 
 **Summarize feedback from your partners here.**
 
+> For the previous part, got wonderful feedbacks from Grace Tan, Jingjun Wang and Snigdha Singhania. We discussed the transmission of love and care, physical and mental wellbeing, and presentation of the video. Some suggestions I received are design iterations for users to carry the device more easily, consider an alternative cues and indicator for the color-blind, and additional feature to distinguish mindfulness from physical well-being.
+
 ## Make it your own
 
 Do last week’s assignment again, but this time: 
@@ -143,3 +169,17 @@ Do last week’s assignment again, but this time:
 3) We will be grading with an emphasis on creativity. 
 
 **Document everything here. (Particularly we'd like to see the storyboard and video, although photos of the prototype are also great.)**
+> For this lab I designed a new interactive device -- an interactive clock.  
+
+> The usecase for this interactive clock is for everyday use. I got my inspiration from the magic clock belongs to the Weasley family from Harry Potter. The clock besides telling time, illuminates and provide a range of brightness, acts as an interactive voice-enabled scheduling assistant, and syncs and updates friends and family's current status with preferences for privacy protection. 
+
+### Storyboard
+![Part 2 - Storyboard](storyboard-p2.png)
+
+**Prototype SetUp**
+> For interaction, I used a remote control floor light to control the light effec, Siri to read and act the script, and cut-out paper with sticky notes as the  clock-face. 
+
+![Part 2 - Setup](p2-setup.png)
+
+**Video**
+> [Link to Video](https://youtu.be/tRjZqWn3JA4)
