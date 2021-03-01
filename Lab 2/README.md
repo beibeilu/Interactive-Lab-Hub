@@ -168,10 +168,18 @@ After that git will ask you to login to your github account to upload.
 ## Part F. 
 ## Make a short video of your modified barebones PiClock
 
+- Show greetings based on hour of the day
+- Push buttons to show time relative to current time to an event
+
 **Take a video of your PiClock.**
+
+[Link to Video](https://youtu.be/eNXzCyd3Yao)
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
+Some additional interactions I want to add
 
-
+- Fetch and use images/icon to show current weather
+- Use background color to indicate time of day (morning/afternoon/night)
+- Fetch calendar? and show time to the next event
