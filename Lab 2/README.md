@@ -185,7 +185,7 @@ Some additional interactions I want to add:
 - Fetch and show current weather
 - Use background color to indicate time of day (morning/afternoon/night)
 
-```
+
 ## Prep for Part 2
 
 1. Pick up remaining parts for kit.
