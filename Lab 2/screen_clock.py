@@ -5,7 +5,9 @@ import digitalio
 import board
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
-
+from adafruit_rgb_display.rgb import color565
+import adafruit_rgb_display.st7789 as st7789
+import webcolors
 
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
 cs_pin = digitalio.DigitalInOut(board.CE0)
@@ -55,7 +57,8 @@ x = 0
 # Alternatively load a TTF font.  Make sure the .ttf font file is in the
 # same directory as the python script!
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
-font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
+font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 16)
+fontLarge = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 20)
 
 # Turn on the backlight
 backlight = digitalio.DigitalInOut(board.D22)
@@ -79,8 +82,9 @@ def strfdelta(tdelta, fmt):
 
 countdowns = {
 	"Wellness Day": "2021-03-09 00:00:00",
-	"Graduation Day": "2021-05-26 10:00:00"
-}
+	"Graduation Day": "2021-05-26 10:00:00",
+        "Tax Day": "2021-04-15 00:00:00"
+        }
 
 def part_of_day():
 	hour = datetime.now().hour
@@ -95,41 +99,64 @@ def part_of_day():
 
 index = 0
 
+def screencolor(timeOfDay):
+	return(color565(168, 235, 18) if timeOfDay == "morning"
+    		else
+			color565(184, 208, 253) if timeOfDay == "afternoon"
+    		else
+    			color565(132, 94, 194) if timeOfDay == "evening"
+	    	else
+        		color565(5, 25, 55)
+	)
+
 def show_countdown(index):
 	delta = to_time(list(countdowns.values())[index]) - datetime.now()
 	line1 = strfdelta(delta, "{days} days {hours} hours and {minutes} min")
 	line2 = "until " + list(countdowns)[index]
 	return (line1, line2)
-    
-#show_countdown(index)
 
-while True:
+def getWeather():
+    cmd = "weather fips5114968"
+    weather = subprocess.check_output(cmd, shell=True).decode("utf-8")
+    text = weather.splitlines()
+    
+    temp = text[2].split(": ")[1]
+    cond = text[-1].split(": ")[1]
+    return temp + "\n" + cond
+
+#show_countdown(index)
+listcounter = 0
+while True: 
     # Draw a black filled box to clear the image.
-    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    draw.rectangle((0, 0, width, height), outline=0,
+            fill=screencolor(part_of_day()))
     
     # Show current time
     t = time.strftime("%m/%d/%Y %H:%M:%S")
     y = top
-    draw.text((x, y), t, font=font, fill="#FFFFFF")
-    greeting = "Good " + part_of_day() + "!"
-    y += font.getsize(t)[1]
-    draw.text((x, y), greeting, font=font, fill="#FFFF00")
+    draw.text((x, y), t, font=fontLarge, fill="#FFFFFF")
     
+    greeting = "Good " + part_of_day() + "!"
+    y += font.getsize(t)[1]*2
+    draw.text((x, y), greeting, font=font, fill="#FFFF00")
+
+    weather = getWeather()
+    y += font.getsize(weather)[1]*2
+    draw.text((x, y), weather, font=font, fill="#FFFFFF")
+
+
     if buttonA.value and not buttonB.value:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
-        text = show_countdown(0)
+        listcounter += 1
+        i = listcounter % len(countdowns)
+        text = show_countdown(i)
         y = top
         draw.text((x, y), text[0], font=font, fill="#FFFFFF")
         y += font.getsize(text[0])[1]
-        draw.text((x, y), text[1], font=font, fill="#FFFFFF")
+        draw.text((x, y), text[1], font=font, fill="#FFFF00")
 
     if buttonB.value and not buttonA.value:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
-        text = show_countdown(1)
-        y = top
-        draw.text((x, y), text[0], font=font, fill="#FFFFFF")
-        y += font.getsize(text[0])[1]
-        draw.text((x, y), text[1], font=font, fill="#FFFFFF")        
     
     # Display image
     disp.image(image, rotation)

@@ -168,28 +168,32 @@ After that, git will ask you to login to your github account to upload.
 ## Part F. 
 ## Make a short video of your modified barebones PiClock
 
-- Show greetings based on hour of the day
-- Push buttons to show time relative to current time to an event
+> - Show greetings based on hour of the day
+> - Push buttons to show time relative to current time to an event
 
 **Take a video of your PiClock.**
 
-[Link to Video](https://youtu.be/eNXzCyd3Yao)
+> [Link to Video](https://youtu.be/eNXzCyd3Yao)
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
 
-Some additional interactions I want to add: 
+> Some additional interactions I want to add: 
 
-- Fetch and use images/icon to show current weather
-- Use background color to indicate time of day (morning/afternoon/night)
-- Fetch calendar? and show time to the next event
+> - Beautify the clock!
+> - Fetch and show current weather
+> - Use background color to indicate time of day (morning/afternoon/night)
+
 
 ## Prep for Part 2
 
 1. Pick up remaining parts for kit.
 
 2. Look at and give feedback on the Part G. for at least 2 other people in the class (and get 2 people to comment on your Part G!)
+
+> Feedbacks are collected in [Discussions](https://github.com/beibeilu/Interactive-Lab-Hub/discussions)
+
 
 # Lab 2 Part 2
 
@@ -201,4 +205,8 @@ As always, make sure you document contributions and ideas from others explicitly
 
 You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
 
+> [Link to Video](https://youtu.be/eSCGu_QxlSQ)
 
+> For part 2, I updated the color background according to the time of day and changed the format to make it look better. 
+> I also added realtime weather information.
+> For the reminder, the bottom button can loop through all stored events.
